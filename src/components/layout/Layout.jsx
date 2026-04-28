@@ -1,0 +1,35 @@
+import { useState } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
+import Navbar from './Navbar'
+import Footer from './Footer'
+import CartDrawer from '../cart/CartDrawer'
+import BookingModal from '../booking/BookingModal'
+
+export default function Layout() {
+  const [bookingOpen, setBookingOpen] = useState(false)
+  const location = useLocation()
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <CartDrawer />
+      <BookingModal isOpen={bookingOpen} onClose={() => setBookingOpen(false)} />
+
+      <AnimatePresence mode="wait">
+        <motion.main
+          key={location.pathname}
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="flex-1 pt-16 lg:pt-18"
+        >
+          <Outlet context={{ openBooking: () => setBookingOpen(true) }} />
+        </motion.main>
+      </AnimatePresence>
+
+      <Footer onBookParty={() => setBookingOpen(true)} />
+    </div>
+  )
+}
