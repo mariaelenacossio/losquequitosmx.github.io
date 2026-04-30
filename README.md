@@ -1,4 +1,4 @@
-# Los Quequitos MX — v2.0
+# Mini Pancake Co. — v2.0
 
 A fully redesigned, production-ready e-commerce and event booking platform for a local mini pancake business in Mazatlán, Mexico. Built as a portfolio project demonstrating modern React architecture, Shopify-inspired UX, and clean visual design.
 
@@ -6,7 +6,7 @@ A fully redesigned, production-ready e-commerce and event booking platform for a
 
 ## Live Site
 
-**[https://mariaelenacossio.github.io/losquequitosmx.github.io/](https://mariaelenacossio.github.io/losquequitosmx.github.io/)**
+**[https://mariaelenacossio.github.io/mini-pancake-co/](https://mariaelenacossio.github.io/mini-pancake-co/)**
 
 ---
 
@@ -84,8 +84,8 @@ Originally a 5-page vanilla HTML/Bootstrap college project, this site has been c
 ## Local Setup
 
 ```bash
-git clone https://github.com/mariaelenacossio/losquequitosmx.github.io
-cd losquequitosmx.github.io
+git clone https://github.com/mariaelenacossio/mini-pancake-co
+cd mini-pancake-co
 npm install
 npm run dev
 ```
